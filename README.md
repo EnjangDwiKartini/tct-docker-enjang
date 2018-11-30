@@ -129,24 +129,24 @@ Hal yang pertama dilakukan adalah mengidentifikasi nama Docker Image yang dikonf
 	CMD ["nginx", "-g", "daemon off;"]
 	~~~
 * Membangun Container
- Perintah build mengambil direktori yang berisi Dockerfile, menjalankan langkah-langkah dan menyimpan images di Docker Engine lokal 
- Perintah untuk melihat daftar gambar di mesin lokal :
- ~~~
- docker images
- ~~~
- ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-18.PNG "Enjang DK")
- ~~~
- docker build -t my-nginx-image:latest .
- ~~~
- ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-19.PNG "Enjang DK")
+	 Perintah build mengambil direktori yang berisi Dockerfile, menjalankan langkah-langkah dan menyimpan images di Docker Engine lokal 
+	 Perintah untuk melihat daftar gambar di mesin lokal :
+	 ~~~
+	 docker images
+	 ~~~
+	 ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-18.PNG "Enjang DK")
+	 ~~~
+	 docker build -t my-nginx-image:latest .
+	 ~~~
+	 ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-19.PNG "Enjang DK")
 * Peluncuran Images Baru 
-~~~
- curl -i http://docker
-~~~
+	~~~
+	 curl -i http://docker
+	~~~
 
-~~~
-docker ps
-~~~
-![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-20.PNG "Enjang DK")
+	~~~
+	docker ps
+	~~~
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-20.PNG "Enjang DK")
 
 	
