@@ -1,6 +1,6 @@
 # BELAJAR DOCKER 
 
-logo ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+ ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/logo.png "logo")
 
 *Docker adalah sebuah aplikasi yang bersifat open source yang berfungsi sebagai wadah/container untuk mengepak/memasukkan sebuah software secara lengkap beserta semua hal lainnya yang dibutuhkan oleh software tersebut dapat berfungsi.*
 
@@ -12,16 +12,16 @@ Hal yang pertama dilakukan adalah mengidentifikasi nama Docker Image yang dikonf
 	~~~
 	Hasil :
 	
-	2 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
-	3 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
-	4 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	 ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-2.PNG "Enjang DK")
+	 ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-3.PNG "Enjang DK")
+	 ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-4.PNG "Enjang DK")
 	
 * Perintah run => memulai kontainer berdasarkan Image Docker
 	~~~
 	docker run -d redis
 	~~~
 	Docker akan menjalankan perintah di latar depan. Untuk berjalan di latar belakang, opsi -d perlu ditentukan. Secara default, Docker akan menjalankan versi terbaru yang tersedia. Hasil dari perintah tersebut adalah :
-	5 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-5.PNG "Enjang DK")
 	
 * Menemukan Running Containers
 	~~~
@@ -29,7 +29,7 @@ Hal yang pertama dilakukan adalah mengidentifikasi nama Docker Image yang dikonf
 	~~~	
 	Perintah ini akan menampilkan nama dan ID  yang dapat digunakan untuk mencari informasi tentang masing-masing kontainer.
 	Hasil :
-	6 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-6.PNG "Enjang DK")
 
 * Mengakses Redis 
 	Perintah untuk menjalankan Redis di latar belakang, dengan nama redisHostPort pada port 6379 :
@@ -37,40 +37,40 @@ Hal yang pertama dilakukan adalah mengidentifikasi nama Docker Image yang dikonf
 	docker run -d --name redisHostPort -p 6379:6379 redis:latest
 	~~~
 	Secara default, port pada host dipetakan ke 0.0.0.0, yang berarti semua alamat IP. Kita dapat menentukan alamat IP tertentu ketika akan menentukan pemetaan port, misalnya, -p 127.0.0.1:6379:6379
-	7 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-7.PNG "Enjang DK")
 * Mengekspos Redis  pada port yang tersedia secara acak
 	~~~
 	docker run -d --name redisDynamic -p 6379 redis:latest
 	~~~
-	8 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-8.PNG "Enjang DK")
 * Menemukan port yang ditugaskan 
 	~~~
 	docker port redisDynamic 6379
 	~~~
-	9 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-9.PNG "Enjang DK")
 * Daftar kontainer menampilkan informasi pemetaan port dengan perintah :
 	~~~
 	docker ps
 	~~~
-	10 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-10.PNG "Enjang DK")
 
 * Persisting Data 
 	==> mengubah Container tanpa kehilangan data , data disimpan di Host Docker 
 	~~~
 	docker run -d --name redisMapped -v /opt/docker/data/redis:/data redis
 	~~~
-	11 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-11.PNG "Enjang DK")
 * Menjalankan Container Di Foreground
 	~~~
 	docker run ubuntu ps
 	~~~
 	meluncurkan sebuah wadah Ubuntu dan mengeksekusi perintah ps untuk melihat semua proses yang berjalan dalam sebuah container.
-	12 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-12.PNG "Enjang DK")
 * Mendapatkan akses ke shell bash di dalam wadah.
 	~~~
 	docker run -it ubuntu bash
 	~~~
-	13 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-13.PNG "Enjang DK")
 ## Menerapkan Situs Web Statis HTML sebagai Container
 * Membuat Dockerfile 
 	Dockerfile adalah daftar instruksi yang menjelaskan cara menyebarkan aplikasi 
@@ -83,23 +83,23 @@ Hal yang pertama dilakukan adalah mengidentifikasi nama Docker Image yang dikonf
 	~~~
 	docker build -t webserver-image:v1 
 	~~~
-	14 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-14.PNG "Enjang DK")
 	Melihat daftar semua images di host 
 	~~~
 	docker images
 	~~~
-	15 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-15.PNG "Enjang DK")
 * Run 
 	Karena ini adalah server web, bind port 80 ke host maka menggunakan parameter -p.
 	~~~
 	docker run -d -p 80:80 webserver-image:v1
 	~~~
-	16 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-16.PNG "Enjang DK")
 	Untuk dapat mengakses hasil port 80 bisa menggunakan perintah berikut :
 	~~~
 	curl docker 
 	~~~
-	17 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-17.PNG "Enjang DK")
 ## Membuat Container Images
 
 * Base Images 
@@ -132,11 +132,11 @@ Hal yang pertama dilakukan adalah mengidentifikasi nama Docker Image yang dikonf
  ~~~
  docker images
  ~~~
- 18 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+ ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-18.PNG "Enjang DK")
  ~~~
  docker build -t my-nginx-image:latest .
  ~~~
- 19 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+ ![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-19.PNG "Enjang DK")
 * Peluncuran Images Baru 
 ~~~
  curl -i http://docker
@@ -145,6 +145,6 @@ Hal yang pertama dilakukan adalah mengidentifikasi nama Docker Image yang dikonf
 ~~~
 docker ps
 ~~~
-20 ![alt text](https://github.com/EnjangDwiKartini/tct/blob/master/images/IMG_20180913_151527.jpg "Enjang DK")
+![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-20.PNG "Enjang DK")
 
 	
