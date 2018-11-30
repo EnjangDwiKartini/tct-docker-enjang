@@ -65,7 +65,9 @@ Hal yang pertama dilakukan adalah mengidentifikasi nama Docker Image yang dikonf
 	docker run ubuntu ps
 	~~~
 	meluncurkan sebuah wadah Ubuntu dan mengeksekusi perintah ps untuk melihat semua proses yang berjalan dalam sebuah container.
+	
 	![alt text](https://github.com/EnjangDwiKartini/tct-docker-enjang/blob/master/img/docker-12.PNG "Enjang DK")
+	
 * Mendapatkan akses ke shell bash di dalam wadah.
 	~~~
 	docker run -it ubuntu bash
